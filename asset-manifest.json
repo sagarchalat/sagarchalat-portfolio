@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd6a974d.css",
-    "main.js": "/static/js/main.f6b4e67e.js",
-    "static/media/rag_chatbot.jpg": "/static/media/rag_chatbot.681845f81c06fcda0dea.jpg",
-    "static/media/aqos_project.jpg": "/static/media/aqos_project.3f2b1c1d5f38c374643d.jpg",
-    "static/media/mlops_pipeline.jpg": "/static/media/mlops_pipeline.39aa7e92b01864ad6315.jpg",
-    "static/media/hero_ml.jpg": "/static/media/hero_ml.559a01c74f995a437916.jpg",
-    "static/media/llm_finetune.jpg": "/static/media/llm_finetune.a48a73bff9f5c7246dd8.jpg",
-    "static/media/profile.jpg": "/static/media/profile.b5b6a95c7ead005a7708.jpg",
-    "index.html": "/index.html",
-    "main.fd6a974d.css.map": "/static/css/main.fd6a974d.css.map",
-    "main.f6b4e67e.js.map": "/static/js/main.f6b4e67e.js.map"
+    "main.css": "/sagarchalat-portfolio/static/css/main.fd6a974d.css",
+    "main.js": "/sagarchalat-portfolio/static/js/main.a9a6eaa5.js",
+    "static/media/rag_chatbot.jpg": "/sagarchalat-portfolio/static/media/rag_chatbot.681845f81c06fcda0dea.jpg",
+    "static/media/aqos_project.jpg": "/sagarchalat-portfolio/static/media/aqos_project.3f2b1c1d5f38c374643d.jpg",
+    "static/media/mlops_pipeline.jpg": "/sagarchalat-portfolio/static/media/mlops_pipeline.39aa7e92b01864ad6315.jpg",
+    "static/media/hero_ml.jpg": "/sagarchalat-portfolio/static/media/hero_ml.559a01c74f995a437916.jpg",
+    "static/media/llm_finetune.jpg": "/sagarchalat-portfolio/static/media/llm_finetune.a48a73bff9f5c7246dd8.jpg",
+    "static/media/profile.jpg": "/sagarchalat-portfolio/static/media/profile.b5b6a95c7ead005a7708.jpg",
+    "index.html": "/sagarchalat-portfolio/index.html",
+    "main.fd6a974d.css.map": "/sagarchalat-portfolio/static/css/main.fd6a974d.css.map",
+    "main.a9a6eaa5.js.map": "/sagarchalat-portfolio/static/js/main.a9a6eaa5.js.map"
   },
   "entrypoints": [
     "static/css/main.fd6a974d.css",
-    "static/js/main.f6b4e67e.js"
+    "static/js/main.a9a6eaa5.js"
   ]
 }
