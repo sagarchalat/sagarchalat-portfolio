@@ -1,0 +1,311 @@
+.resume-page-container {
+  min-height: 100vh;
+  background-color: #141414;
+  padding: 100px 32px 60px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.resume-control-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 24px;
+}
+
+.netflix-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #E50914;
+  text-transform: uppercase;
+}
+
+.resume-title-group h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: #fff;
+  margin: 6px 0;
+}
+
+.resume-subtitle {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.resume-action-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.download-btn {
+  background-color: #E50914;
+  color: #fff;
+}
+
+.download-btn:hover {
+  background-color: #f40612;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+  transform: translateY(-2px);
+}
+
+.preview-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.preview-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.resume-tabs-wrapper {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.resume-tab-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #aaa;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.resume-tab-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.resume-tab-btn.active {
+  background-color: #fff;
+  color: #141414;
+  border-color: #fff;
+  font-weight: 700;
+}
+
+/* PDF Viewer Card */
+.pdf-viewer-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.pdf-status-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background-color: #222;
+  font-size: 0.85rem;
+  color: #bbb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dot-live {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #46d369;
+  box-shadow: 0 0 6px #46d369;
+}
+
+.pdf-frame-wrapper {
+  width: 100%;
+  height: 880px;
+  background-color: #2d2d2d;
+}
+
+.pdf-object,
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.pdf-fallback-notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  gap: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ATS Digital Resume View */
+.ats-resume-container {
+  background-color: #ffffff;
+  color: #111111;
+  padding: 48px 56px;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+  font-family: 'Times New Roman', Times, serif, 'Inter', sans-serif;
+  line-height: 1.45;
+}
+
+.ats-header {
+  text-align: center;
+  border-bottom: 2px solid #222;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.ats-header h2 {
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin: 0 0 8px 0;
+  color: #000;
+}
+
+.ats-contact-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ats-contact-row a {
+  color: #0b57d0;
+  text-decoration: none;
+}
+
+.ats-section {
+  margin-bottom: 22px;
+}
+
+.ats-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-bottom: 1.5px solid #222;
+  padding-bottom: 4px;
+  margin: 0 0 12px 0;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+.ats-summary-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
+  margin: 0;
+}
+
+.ats-skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ats-skill-line {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.ats-exp-block {
+  margin-bottom: 16px;
+}
+
+.ats-exp-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.ats-exp-role {
+  font-size: 1.05rem;
+  font-style: italic;
+}
+
+.ats-exp-company {
+  font-weight: 700;
+}
+
+.ats-exp-period {
+  font-weight: 600;
+}
+
+.ats-bullet-list {
+  margin: 6px 0 10px 20px;
+  padding: 0;
+}
+
+.ats-bullet-list li {
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+.ats-subheading {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+.achievements-list li strong {
+  color: #b30000;
+}
+
+.ats-project-item {
+  margin-bottom: 14px;
+}
+
+.ats-project-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.ats-tech-sub {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .resume-page-container {
+    padding: 85px 16px 40px 16px;
+  }
+  .resume-control-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .ats-resume-container {
+    padding: 24px;
+  }
+  .pdf-frame-wrapper {
+    height: 550px;
+  }
+}

@@ -1,0 +1,460 @@
+.skills-page-wrapper {
+  min-height: 100vh;
+  background-color: #141414;
+  padding: 95px 32px 60px 32px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.skills-header-banner {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 36px auto;
+}
+
+.netflix-original-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #E50914;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.skills-main-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  margin: 0 0 12px 0;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+}
+
+.skills-hero-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #bbb;
+  margin: 0 auto 28px auto;
+}
+
+.skills-search-container {
+  position: relative;
+  max-width: 540px;
+  margin: 0 auto 24px auto;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.skills-search-input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #202020;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 13px 44px 13px 48px;
+  color: #fff;
+  font-size: 0.98rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.25s ease;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.skills-search-input:focus {
+  outline: none;
+  background-color: #262626;
+  border-color: #E50914;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.4);
+}
+
+.clear-search-btn {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.clear-search-btn:hover {
+  color: #fff;
+}
+
+.category-tabs-scroll {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.category-pill-btn {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #ccc;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.category-pill-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.category-pill-btn.active {
+  background-color: #E50914;
+  color: #fff;
+  border-color: #E50914;
+  box-shadow: 0 0 12px rgba(229, 9, 20, 0.5);
+}
+
+.skills-display-container {
+  margin-top: 20px;
+}
+
+.skills-count-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #888;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.verify-resume-link {
+  color: #E50914;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.verify-resume-link:hover {
+  color: #f40612;
+  text-decoration: underline;
+}
+
+.netflix-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+/* 3D Flip Card Container */
+.skill-flip-card {
+  background-color: transparent;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.skill-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.skill-flip-card:hover .skill-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-flip-front,
+.skill-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Front Side */
+.skill-flip-front {
+  background: linear-gradient(145deg, #1f1f1f 0%, #161616 100%);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-flip-card:hover .skill-flip-front {
+  border-color: #E50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.35);
+}
+
+.card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-badge-tag {
+  background: rgba(229, 9, 20, 0.15);
+  color: #E50914;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-match-percent {
+  color: #46d369;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.skill-front-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+.skill-icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: radial-gradient(circle, #E50914 0%, #90050c 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(229, 9, 20, 0.4);
+  flex-shrink: 0;
+}
+
+.skill-letter {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 900;
+}
+
+.skill-title-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.skill-progress-track {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin: 6px 0;
+}
+
+.skill-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #E50914, #ff4d4d);
+  border-radius: 2px;
+}
+
+.skill-tags-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-micro-pill {
+  background: rgba(255, 255, 255, 0.06);
+  color: #aaa;
+  font-size: 0.75rem;
+  padding: 2px 7px;
+  border-radius: 3px;
+}
+
+.flip-prompt {
+  font-size: 0.72rem;
+  color: #666;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Back Side */
+.skill-flip-back {
+  background: linear-gradient(145deg, #161616 0%, #0d0d0d 100%);
+  transform: rotateY(180deg);
+  border: 1px solid rgba(229, 9, 20, 0.4);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.25);
+}
+
+.back-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.back-netflix-n {
+  color: #E50914;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.back-skill-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.skill-back-description {
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #d2d2d2;
+  margin: 6px 0;
+}
+
+.back-tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.tag-cloud-item {
+  background: rgba(229, 9, 20, 0.12);
+  color: #f5b3b6;
+  border: 1px solid rgba(229, 9, 20, 0.25);
+  font-size: 0.72rem;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.back-action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.back-production-label {
+  font-size: 0.75rem;
+  color: #46d369;
+  font-weight: 700;
+}
+
+.no-skills-found {
+  text-align: center;
+  padding: 48px;
+  color: #888;
+}
+
+.reset-filter-btn {
+  background-color: #E50914;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* Bottom Resume Callout Banner */
+.skills-resume-banner {
+  margin-top: 48px;
+  background: linear-gradient(90deg, #1c0607 0%, #1e1e1e 60%, #141414 100%);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  border-radius: 10px;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin: 0 0 6px 0;
+}
+
+.banner-text p {
+  color: #aaa;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.banner-download-btn {
+  background-color: #E50914;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.banner-download-btn:hover {
+  background-color: #f40612;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.7);
+  transform: translateY(-2px);
+}
+
+.banner-view-btn {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.2s ease;
+}
+
+.banner-view-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .skills-page-wrapper {
+    padding: 85px 16px 40px 16px;
+  }
+  .skills-main-title {
+    font-size: 2.5rem;
+  }
+  .skills-resume-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+  }
+}

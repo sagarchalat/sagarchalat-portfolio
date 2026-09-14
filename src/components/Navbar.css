@@ -1,0 +1,273 @@
+.netflix-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+}
+
+.netflix-navbar.scrolled {
+  background-color: rgba(18, 18, 18, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(229, 9, 20, 0.15);
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand-group {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.netflix-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.netflix-logo:hover {
+  transform: scale(1.03);
+}
+
+.netflix-n {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #E50914;
+  line-height: 1;
+  text-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+  letter-spacing: 1px;
+}
+
+.logo-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1.5px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.logo-ai {
+  color: #E50914;
+}
+
+.desktop-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-item {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  position: relative;
+  padding: 6px 2px;
+}
+
+.nav-item:hover {
+  color: #ffffff;
+}
+
+.nav-item.active {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #E50914;
+  box-shadow: 0 0 8px #E50914;
+}
+
+.resume-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-pulse-badge {
+  background: #E50914;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  animation: pulseBadge 2s infinite ease-in-out;
+}
+
+@keyframes pulseBadge {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 9, 20, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(229, 9, 20, 0);
+  }
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-resume-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(229, 9, 20, 0.9);
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  letter-spacing: 0.5px;
+}
+
+.navbar-resume-btn:hover {
+  background: #f40612;
+  transform: scale(1.05);
+  box-shadow: 0 0 16px rgba(229, 9, 20, 0.6);
+}
+
+.avatar-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.navbar-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 2px solid rgba(229, 9, 20, 0.8);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.navbar-avatar:hover {
+  transform: scale(1.08);
+  border-color: #E50914;
+}
+
+.online-indicator {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
+  background-color: #46d369;
+  border: 2px solid #141414;
+  border-radius: 50%;
+}
+
+.mobile-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.mobile-toggle-btn span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.mobile-toggle-btn.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-toggle-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle-btn.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobile-drawer {
+  display: none;
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(15, 15, 15, 0.98);
+  backdrop-filter: blur(16px);
+  padding: 16px 24px 28px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  gap: 14px;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+.mobile-nav-item {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.mobile-nav-item.active {
+  color: #E50914;
+  font-weight: 700;
+}
+
+.mobile-nav-item.resume-item {
+  color: #fff;
+  background: rgba(229, 9, 20, 0.2);
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(229, 9, 20, 0.4);
+}
+
+@media (max-width: 860px) {
+  .desktop-links {
+    display: none;
+  }
+  .mobile-toggle-btn {
+    display: flex;
+  }
+  .mobile-drawer {
+    display: flex;
+  }
+}
