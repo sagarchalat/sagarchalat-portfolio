@@ -1,3 +1,12 @@
+import resumeAssetPdf from '../assets/Sagar_S_AI-Eng.pdf';
+import aqosPoster from '../assets/aqos_project.jpg';
+import ragPoster from '../assets/rag_chatbot.jpg';
+import llmPoster from '../assets/llm_finetune.jpg';
+import mlopsPoster from '../assets/mlops_pipeline.jpg';
+
+const PUBLIC_URL = process.env.PUBLIC_URL || '';
+const resumeUrl = resumeAssetPdf || `${PUBLIC_URL}/Sagar_S_AI-Eng.pdf`;
+
 export const portfolioData = {
   personal: {
     name: "Sagar S",
@@ -9,7 +18,7 @@ export const portfolioData = {
     github: "https://github.com/sagarchalat",
     linkedin: "https://www.linkedin.com/in/sagarchalat",
     website: "https://sagarchalatan.netlify.app",
-    resumeUrl: "/Sagar_S_AI-Eng.pdf",
+    resumeUrl: resumeUrl,
     matchScore: "99% Match",
     seasons: "1.8+ Yrs Exp",
     quality: "Ultra HD 4K",
@@ -298,7 +307,7 @@ export const portfolioData = {
     }
   ],
 
-  masterDocxUrl: "/docs/Sagar_S_Master_Projects_HLD_LLD_Specifications.docx",
+  masterDocxUrl: `${PUBLIC_URL}/docs/Sagar_S_Master_Projects_HLD_LLD_Specifications.docx`,
 
   projects: [
     {
@@ -306,13 +315,13 @@ export const portfolioData = {
       title: "AI QA Operating System (AQOS)",
       subtitle: "Enterprise Multi-Agent AI Platform",
       category: "Agentic AI & Multi-Agent",
-      poster: "/assets/aqos_project.jpg",
+      poster: aqosPoster,
       localPoster: "aqos_project.jpg",
       badge: "NETFLIX ORIGINAL • #1 INNOVATION IN AI",
       rating: "99% Match",
       year: "2025",
       duration: "Enterprise Platform",
-      docxUrl: "/docs/AQOS_HLD_LLD_Architecture_Design.docx",
+      docxUrl: `${PUBLIC_URL}/docs/AQOS_HLD_LLD_Architecture_Design.docx`,
       docxName: "AQOS_HLD_LLD_Architecture_Design.docx",
       tech: ["Python", "FastAPI", "LangChain", "RAG", "PostgreSQL", "Vector DB", "Docker", "Kubernetes", "GCP"],
       summary:
@@ -371,13 +380,13 @@ export const portfolioData = {
       title: "Enterprise RAG Chatbot",
       subtitle: "Grounded Knowledge Retrieval Platform",
       category: "Generative AI & LLMs",
-      poster: "/assets/rag_chatbot.jpg",
+      poster: ragPoster,
       localPoster: "rag_chatbot.jpg",
       badge: "NETFLIX ORIGINAL • HIGH ACCURACY",
       rating: "98% Match",
       year: "2025",
       duration: "Production Ready",
-      docxUrl: "/docs/Enterprise_RAG_Chatbot_HLD_LLD.docx",
+      docxUrl: `${PUBLIC_URL}/docs/Enterprise_RAG_Chatbot_HLD_LLD.docx`,
       docxName: "Enterprise_RAG_Chatbot_HLD_LLD.docx",
       tech: ["Python", "LangChain", "FAISS", "FastAPI", "Google Cloud", "OpenAI"],
       summary:
@@ -431,13 +440,13 @@ export const portfolioData = {
       title: "LLM Fine-Tuning Pipeline",
       subtitle: "Parameter-Efficient Domain Adaptation",
       category: "Large Language Models",
-      poster: "/assets/llm_finetune.jpg",
+      poster: llmPoster,
       localPoster: "llm_finetune.jpg",
       badge: "NETFLIX ORIGINAL • DEEP LEARNING",
       rating: "97% Match",
       year: "2025",
       duration: "Deep Learning",
-      docxUrl: "/docs/LLM_Fine_Tuning_Pipeline_HLD_LLD.docx",
+      docxUrl: `${PUBLIC_URL}/docs/LLM_Fine_Tuning_Pipeline_HLD_LLD.docx`,
       docxName: "LLM_Fine_Tuning_Pipeline_HLD_LLD.docx",
       tech: ["PyTorch", "Hugging Face", "LoRA", "PEFT", "Transformers", "CUDA"],
       summary:
@@ -491,13 +500,13 @@ export const portfolioData = {
       title: "MLOps Deployment Pipeline",
       subtitle: "Automated Cloud-Native CI/CD",
       category: "Cloud & DevOps",
-      poster: "/assets/mlops_pipeline.jpg",
+      poster: mlopsPoster,
       localPoster: "mlops_pipeline.jpg",
       badge: "NETFLIX ORIGINAL • CLOUD NATIVE",
       rating: "96% Match",
       year: "2025",
       duration: "Enterprise Scale",
-      docxUrl: "/docs/MLOps_Deployment_Pipeline_HLD_LLD.docx",
+      docxUrl: `${PUBLIC_URL}/docs/MLOps_Deployment_Pipeline_HLD_LLD.docx`,
       docxName: "MLOps_Deployment_Pipeline_HLD_LLD.docx",
       tech: ["Docker", "Kubernetes", "GitHub Actions", "MLflow", "GCP", "FastAPI"],
       summary:
@@ -555,7 +564,7 @@ export const portfolioData = {
       rating: "95% Match",
       year: "2024",
       duration: "Interactive Voice",
-      docxUrl: "/docs/Naruto_AI_Voice_Assistant_HLD_LLD.docx",
+      docxUrl: `${PUBLIC_URL}/docs/Naruto_AI_Voice_Assistant_HLD_LLD.docx`,
       docxName: "Naruto_AI_Voice_Assistant_HLD_LLD.docx",
       tech: ["Python", "Speech Recognition", "Voice Synthesis", "NLP"],
       summary:
@@ -604,7 +613,7 @@ export const portfolioData = {
       rating: "95% Match",
       year: "2024",
       duration: "Computer Vision",
-      docxUrl: "/docs/Deepfake_Detection_HLD_LLD.docx",
+      docxUrl: `${PUBLIC_URL}/docs/Deepfake_Detection_HLD_LLD.docx`,
       docxName: "Deepfake_Detection_HLD_LLD.docx",
       tech: ["PyTorch", "OpenCV", "CNNs", "Facial Landmark Detection"],
       summary:
