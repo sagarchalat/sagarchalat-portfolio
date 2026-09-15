@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import { portfolioData } from './data/portfolioData';
 import './pages/styles.css';
 
 // Auto scroll to top on page navigation
@@ -48,7 +49,7 @@ function App() {
               <a href="https://github.com/sagarchalat" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/sagarchalat" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://sagarchalatan.netlify.app" target="_blank" rel="noopener noreferrer">Netlify Site</a>
-              <a href="/Sagar_S_AI-Eng.pdf" download="Sagar_S_AI-Eng.pdf">Download Resume</a>
+              <a href={portfolioData.personal.resumeUrl} download="Sagar_S_AI-Eng.pdf">Download Resume</a>
               <a href="mailto:sagarchalatan@gmail.com">sagarchalatan@gmail.com</a>
             </div>
           </div>
