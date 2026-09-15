@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import profileImage from '../assets/profile.jpg';
+import { portfolioData } from '../data/portfolioData';
 import './Navbar.css';
 
 function Navbar() {
@@ -57,7 +58,7 @@ function Navbar() {
         {/* Right Section: Resume CTA & Avatar */}
         <div className="navbar-actions">
           <a
-            href="/Sagar_S_AI-Eng.pdf"
+            href={portfolioData.personal.resumeUrl}
             download="Sagar_S_AI-Eng.pdf"
             className="navbar-resume-btn"
             title="Direct Download PDF Resume"

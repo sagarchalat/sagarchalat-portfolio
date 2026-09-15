@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { portfolioData } from '../data/portfolioData';
 import './ProjectModal.css';
 
 function ProjectModal({ project, onClose }) {
@@ -380,7 +381,7 @@ function ProjectModal({ project, onClose }) {
                 </a>
               )}
               <a
-                href="/Sagar_S_AI-Eng.pdf"
+                href={portfolioData.personal.resumeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="modal-cta-btn secondary-cta"

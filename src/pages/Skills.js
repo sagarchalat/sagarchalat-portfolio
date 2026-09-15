@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { portfolioData } from '../data/portfolioData';
 import './Skills.css';
 
@@ -6,7 +7,7 @@ function Skills() {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const { skills, skillCategories } = portfolioData;
+  const { personal, skills, skillCategories } = portfolioData;
 
   const filteredSkills = useMemo(() => {
     return skills.filter((skill) => {
@@ -68,7 +69,7 @@ function Skills() {
       <div className="skills-display-container">
         <div className="skills-count-bar">
           <span>Showing <strong>{filteredSkills.length}</strong> core technologies verified in Sagar's resume</span>
-          <a href="/Sagar_S_AI-Eng.pdf" target="_blank" rel="noopener noreferrer" className="verify-resume-link">
+          <a href={personal.resumeUrl} target="_blank" rel="noopener noreferrer" className="verify-resume-link">
             Verify in Resume PDF →
           </a>
         </div>
@@ -147,12 +148,12 @@ function Skills() {
           <p>Download the official Agentic AI Engineer resume PDF directly.</p>
         </div>
         <div className="banner-buttons">
-          <a href="/Sagar_S_AI-Eng.pdf" download="Sagar_S_AI-Eng.pdf" className="banner-download-btn">
+          <a href={personal.resumeUrl} download="Sagar_S_AI-Eng.pdf" className="banner-download-btn">
             Download Resume PDF (161 KB)
           </a>
-          <a href="/resume" className="banner-view-btn">
+          <Link to="/resume" className="banner-view-btn">
             View Live in Browser
-          </a>
+          </Link>
         </div>
       </div>
     </div>
