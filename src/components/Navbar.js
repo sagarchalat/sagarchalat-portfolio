@@ -31,8 +31,8 @@ function Navbar() {
         {/* Brand / Logo */}
         <div className="navbar-brand-group">
           <Link to="/" className="netflix-logo" onClick={closeMenu}>
-            <span className="netflix-n">N</span>
-            <span className="logo-name">SAGAR<span className="logo-ai">.AI</span></span>
+            <span className="netflix-n">S</span>
+            <span className="logo-name">SAGARCHALAT<span className="logo-ai">.AI</span></span>
           </Link>
 
           {/* Desktop Navigation Links */}

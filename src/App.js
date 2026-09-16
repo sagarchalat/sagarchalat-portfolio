@@ -39,11 +39,11 @@ function App() {
         <footer className="netflix-global-footer">
           <div className="footer-content">
             <div className="footer-brand">
-              <span className="footer-n">N</span>
-              <span className="footer-text">SAGAR S • AGENTIC AI ENGINEER</span>
+              <span className="footer-n">S</span>
+              <span className="footer-text">SAGARCHALAT • AGENTIC AI ENGINEER</span>
             </div>
             <p className="footer-copy">
-              © {new Date().getFullYear()} Sagar S. Built with React & Netflix Design Aesthetics. All rights reserved.
+              © {new Date().getFullYear()} Sagar Chalat. Designed with cinematic streamer aesthetics. All rights reserved.
             </p>
             <div className="footer-links">
               <a href="https://github.com/sagarchalat" target="_blank" rel="noopener noreferrer">GitHub</a>

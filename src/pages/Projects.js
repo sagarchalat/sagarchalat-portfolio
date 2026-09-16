@@ -34,7 +34,7 @@ function Projects() {
     <div className="projects-page-container">
       {/* Netflix Series Header */}
       <div className="projects-header-banner">
-        <span className="netflix-tagline">NETFLIX ORIGINAL PRODUCTIONS</span>
+        <span className="netflix-tagline">SAGARCHALAT ORIGINAL PRODUCTIONS</span>
         <h1 className="projects-title">FEATURED AI/ML PROJECTS</h1>
         <p className="projects-subtitle">
           Engineered for production scale. Inspect interactive High-Level Design (HLD) & Low-Level Design (LLD) architectures, or download the complete specification as Microsoft Word (.docx) documents.
@@ -119,7 +119,7 @@ function Projects() {
                   <img src={posterSrc} alt={project.title} className="card-poster-img" />
                 ) : (
                   <div className="card-fallback-poster">
-                    <span className="fallback-n">N</span>
+                    <span className="fallback-n">S</span>
                     <span className="fallback-title">{project.title}</span>
                   </div>
                 )}

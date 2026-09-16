@@ -41,8 +41,8 @@ function Home() {
 
         <div className="hero-content-wrapper">
           <div className="hero-series-tag">
-            <span className="hero-n-badge">N</span>
-            <span className="hero-tag-text">ORIGINAL • MACHINE LEARNING ENGINEER</span>
+            <span className="hero-n-badge">S</span>
+            <span className="hero-tag-text">SAGARCHALAT ORIGINAL • AGENTIC AI ENGINEER</span>
           </div>
 
           <h1 className="hero-main-title">{personal.name}</h1>
@@ -151,7 +151,7 @@ function Home() {
                     <img src={poster} alt={proj.title} className="slide-poster" />
                   ) : (
                     <div className="slide-fallback">
-                      <span className="fallback-tag">NETFLIX ORIGINAL</span>
+                      <span className="fallback-tag">SAGARCHALAT ORIGINAL</span>
                       <h4>{proj.title}</h4>
                     </div>
                   )}
@@ -228,7 +228,7 @@ function Home() {
           <div key={exp.id} className="experience-netflix-card">
             <div className="exp-banner-header">
               <div className="exp-badge-group">
-                <span className="exp-netflix-n">N</span>
+                <span className="exp-netflix-n">S</span>
                 <span className="exp-status-pill">{exp.status}</span>
                 <span className="exp-match-pill">{exp.match}</span>
               </div>

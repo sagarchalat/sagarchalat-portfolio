@@ -26,7 +26,7 @@ function Skills() {
     <div className="skills-page-wrapper">
       {/* Netflix Banner Header */}
       <div className="skills-header-banner">
-        <span className="netflix-original-pill">NETFLIX PORTFOLIO • TECH STACK</span>
+        <span className="netflix-original-pill">SAGARCHALAT PORTFOLIO • TECH STACK</span>
         <h1 className="skills-main-title">AI & MACHINE LEARNING SKILLS</h1>
         <p className="skills-hero-desc">
           Specialized in scalable AI architectures, Large Language Models, Retrieval-Augmented Generation (RAG),
@@ -110,7 +110,7 @@ function Skills() {
                 {/* Back Side */}
                 <div className="skill-flip-back">
                   <div className="back-badge-row">
-                    <span className="back-netflix-n">N</span>
+                    <span className="back-netflix-n">S</span>
                     <span className="back-skill-name">{skill.name}</span>
                   </div>
 
