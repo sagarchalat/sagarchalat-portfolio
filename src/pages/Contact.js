@@ -7,6 +7,8 @@ function Contact() {
   const { personal } = portfolioData;
   const [copied, setCopied] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
 
   const handleCopyEmail = () => {
@@ -15,9 +17,40 @@ function Contact() {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '73605e24-f35c-4e84-ae35-4ae63286df9f',
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || 'New Opportunity / Contact from Portfolio',
+          message: formData.message,
+          from_name: 'Sagar S Portfolio Lead'
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        setFormSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setErrorMessage(result.message || 'Something went wrong. Please try again or email directly.');
+      }
+    } catch (err) {
+      setErrorMessage('Unable to send message right now. Please email directly at sagarchalatan@gmail.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -148,14 +181,20 @@ function Contact() {
             {formSubmitted ? (
               <div className="form-success-box">
                 <div className="success-icon">✓</div>
-                <h4>Message Received!</h4>
-                <p>Thank you for reaching out. Sagar will review your message and reply via email promptly.</p>
+                <h4>Message Sent Successfully!</h4>
+                <p>Thank you for reaching out. Your message has been delivered directly to Sagar's inbox at <strong>sagarchalat@gmail.com</strong>.</p>
                 <button className="reset-form-btn" onClick={() => setFormSubmitted(false)}>
                   Send Another Message
                 </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="netflix-contact-form">
+                {errorMessage && (
+                  <div className="form-error-alert" style={{ color: '#ff4d4f', background: 'rgba(255, 77, 79, 0.12)', border: '1px solid rgba(255, 77, 79, 0.3)', padding: '12px 16px', borderRadius: '6px', fontSize: '0.9rem' }}>
+                    ⚠️ {errorMessage}
+                  </div>
+                )}
+
                 <div className="form-field">
                   <label htmlFor="name">Your Name</label>
                   <input
@@ -204,8 +243,8 @@ function Contact() {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="form-submit-btn">
-                  ▶ Send Message to Sagar
+                <button type="submit" className="form-submit-btn" disabled={isSubmitting}>
+                  {isSubmitting ? '▶ Sending Message...' : '▶ Send Message to Sagar'}
                 </button>
               </form>
             )}
