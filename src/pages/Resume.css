@@ -163,119 +163,152 @@
   padding: 20px;
 }
 
-/* ATS Digital Resume View */
+.print-btn {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.print-btn:hover {
+  background-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+/* ATS Digital Resume View - 1:1 Mirror of Sagar_S_AI-Eng.pdf */
 .ats-resume-container {
   background-color: #ffffff;
-  color: #111111;
-  padding: 48px 56px;
-  border-radius: 8px;
+  color: #000000;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 64px;
+  border-radius: 4px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-  font-family: 'Times New Roman', Times, serif, 'Inter', sans-serif;
-  line-height: 1.45;
+  font-family: 'Times New Roman', Times, 'Nimbus Roman No9 L', Georgia, serif;
+  line-height: 1.42;
 }
 
 .ats-header {
   text-align: center;
-  border-bottom: 2px solid #222;
-  padding-bottom: 14px;
   margin-bottom: 20px;
 }
 
-.ats-header h2 {
+.ats-name {
   font-size: 2.2rem;
-  letter-spacing: 2px;
-  margin: 0 0 8px 0;
-  color: #000;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0 0 6px 0;
+  color: #000000;
+  font-family: inherit;
+}
+
+.ats-title-sub {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+  letter-spacing: 0.2px;
 }
 
 .ats-contact-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 8px;
-  font-size: 0.95rem;
-  color: #333;
+  gap: 6px;
+  font-size: 0.92rem;
+  color: #111111;
 }
 
 .ats-contact-row a {
-  color: #0b57d0;
-  text-decoration: none;
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ats-divider {
+  color: #444;
+  padding: 0 2px;
 }
 
 .ats-section {
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .ats-section-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  border-bottom: 1.5px solid #222;
-  padding-bottom: 4px;
-  margin: 0 0 12px 0;
-  letter-spacing: 1px;
-  color: #111;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 2px;
+  margin: 16px 0 8px 0;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: inherit;
 }
 
 .ats-summary-text {
-  font-size: 1rem;
-  line-height: 1.5;
-  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #111111;
   margin: 0;
+  text-align: justify;
 }
 
 .ats-skills-grid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .ats-skill-line {
-  font-size: 0.95rem;
-  color: #222;
+  font-size: 0.93rem;
+  line-height: 1.4;
+  color: #111111;
+}
+
+.ats-skill-line strong {
+  font-weight: 700;
+  color: #000000;
 }
 
 .ats-exp-block {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .ats-exp-header {
   display: flex;
   justify-content: space-between;
-  font-size: 1rem;
-  margin-bottom: 6px;
+  align-items: baseline;
+  font-size: 0.98rem;
+  margin-bottom: 4px;
 }
 
 .ats-exp-role {
-  font-size: 1.05rem;
-  font-style: italic;
+  font-weight: 700;
+  color: #000000;
 }
 
 .ats-exp-company {
-  font-weight: 700;
+  font-weight: 400;
+  color: #111111;
 }
 
 .ats-exp-period {
-  font-weight: 600;
+  font-style: italic;
+  font-weight: 400;
+  color: #222222;
 }
 
 .ats-bullet-list {
-  margin: 6px 0 10px 20px;
+  margin: 4px 0 8px 24px;
   padding: 0;
+  list-style-type: disc;
 }
 
 .ats-bullet-list li {
-  margin-bottom: 4px;
-  font-size: 0.95rem;
-}
-
-.ats-subheading {
-  font-weight: 700;
-  font-size: 0.95rem;
-  margin-top: 8px;
-}
-
-.achievements-list li strong {
-  color: #b30000;
+  margin-bottom: 3px;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: #111111;
 }
 
 .ats-project-item {
@@ -283,15 +316,30 @@
 }
 
 .ats-project-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 4px;
+  font-size: 0.98rem;
+  margin-bottom: 2px;
 }
 
 .ats-tech-sub {
   font-style: italic;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.92rem;
+  color: #222222;
+  margin-bottom: 4px;
+}
+
+.ats-edu-block {
+  margin-bottom: 8px;
+}
+
+.ats-edu-degree {
+  font-size: 0.98rem;
+  margin-bottom: 2px;
+  color: #000000;
+}
+
+.ats-edu-school {
+  font-size: 0.93rem;
+  color: #222222;
 }
 
 @media (max-width: 768px) {
@@ -303,9 +351,34 @@
     align-items: flex-start;
   }
   .ats-resume-container {
-    padding: 24px;
+    padding: 28px 20px;
   }
   .pdf-frame-wrapper {
     height: 550px;
+  }
+}
+
+/* Clean Print layout */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .navbar,
+  .netflix-global-footer,
+  .resume-control-bar,
+  .resume-tabs-wrapper,
+  .pdf-viewer-card {
+    display: none !important;
+  }
+  .resume-page-container {
+    padding: 0 !important;
+    max-width: 100% !important;
+    background: transparent !important;
+  }
+  .ats-resume-container {
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
   }
 }

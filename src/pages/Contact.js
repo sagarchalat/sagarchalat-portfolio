@@ -117,9 +117,9 @@ function Contact() {
                   </svg>
                 </div>
                 <div className="action-details">
-                  <span className="action-label">Website</span>
+                  <span className="action-label">Portfolio</span>
                   <a href={personal.website} target="_blank" rel="noopener noreferrer" className="action-val">
-                    sagarchalatan.netlify.app
+                    Personal-Portfolio
                   </a>
                 </div>
               </div>

@@ -17,7 +17,7 @@ export const portfolioData = {
     email: "sagarchalatan@gmail.com",
     github: "https://github.com/sagarchalat",
     linkedin: "https://www.linkedin.com/in/sagarchalat",
-    website: "https://sagarchalatan.netlify.app",
+    website: "https://sagarchalat.github.io/sagarchalat-portfolio/",
     resumeUrl: resumeUrl,
     matchScore: "99% Match",
     seasons: "1.8+ Yrs Exp",
@@ -658,14 +658,14 @@ export const portfolioData = {
   certifications: [
     {
       title: "Programming with Python Professional Certificate",
-      issuer: "OpenEDG Python Institute",
+      issuer: "OpenEDG",
       badge: "Professional Certificate",
       color: "#306998",
       description: "Advanced Python semantics, OOP, algorithms, data structures, and production-grade software engineering."
     },
     {
       title: "Machine Learning Statistical Foundations",
-      issuer: "Wolfram Research",
+      issuer: "Wolfram",
       badge: "Professional Certificate",
       color: "#DD1100",
       description: "Advanced statistical theory, hypothesis testing, probability distributions, and mathematical foundations of ML."

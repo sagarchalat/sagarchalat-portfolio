@@ -4,7 +4,11 @@ import './Resume.css';
 
 function Resume() {
   const [activeTab, setActiveTab] = useState('pdf'); // 'pdf' or 'ats'
-  const { personal, experience, certifications } = portfolioData;
+  const { personal } = portfolioData;
+
+  const handlePrint = () => {
+    window.print();
+  };
 
   return (
     <div className="resume-page-container">
@@ -47,6 +51,19 @@ function Resume() {
             </svg>
             <span>Open in Tab</span>
           </a>
+
+          <button
+            onClick={handlePrint}
+            className="action-btn print-btn"
+            title="Print or Save Resume"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
+              <polyline points="6 9 6 2 18 2 18 9" />
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+              <rect x="6" y="14" width="12" height="8" />
+            </svg>
+            <span>Print</span>
+          </button>
         </div>
       </div>
 
@@ -62,7 +79,7 @@ function Resume() {
           className={`resume-tab-btn ${activeTab === 'ats' ? 'active' : ''}`}
           onClick={() => setActiveTab('ats')}
         >
-          ⚡ Interactive Resume Breakdown
+          ⚡ Interactive Resume Breakdown (1:1 PDF Mirror)
         </button>
       </div>
 
@@ -100,41 +117,43 @@ function Resume() {
           </div>
         </div>
       ) : (
-        /* Interactive Breakdown */
+        /* Interactive Breakdown - 1:1 Match with Sagar_S_AI-Eng.pdf */
         <div className="ats-resume-container">
-          {/* Header Contact */}
+          {/* Header */}
           <header className="ats-header">
-            <h2>{personal.name}</h2>
+            <h1 className="ats-name">SAGAR S</h1>
             <div className="ats-title-sub">
-              <strong>Agentic AI Engineer | LLM Applications | Multi-Agent AI | RAG | Backend Engineering</strong>
+              Agentic AI Engineer | LLM Applications | Multi-Agent AI | RAG | Backend Engineering
             </div>
             <div className="ats-contact-row">
-              <span>{personal.location}</span>
-              <span>•</span>
-              <a href={`tel:${personal.phone}`}>{personal.phone}</a>
-              <span>•</span>
-              <a href={`mailto:${personal.email}`}>{personal.email}</a>
-              <span>•</span>
-              <a href={personal.linkedin} target="_blank" rel="noopener noreferrer">linkedin.com/in/sagarchalat</a>
-              <span>•</span>
-              <a href={personal.github} target="_blank" rel="noopener noreferrer">github.com/sagarchalat</a>
-              <span>•</span>
-              <a href={personal.website} target="_blank" rel="noopener noreferrer">sagarchalatan.netlify.app</a>
+              <span>Bengaluru, India</span>
+              <span className="ats-divider">|</span>
+              <a href="tel:+917338498489">+91 73384 98489</a>
+              <span className="ats-divider">|</span>
+              <a href="mailto:sagarchalatan@gmail.com">sagarchalatan@gmail.com</a>
+              <span className="ats-divider">|</span>
+              <a href="https://www.linkedin.com/in/sagarchalat" target="_blank" rel="noopener noreferrer">linkedin.com/in/sagarchalat</a>
+              <span className="ats-divider">|</span>
+              <a href="https://github.com/sagarchalat" target="_blank" rel="noopener noreferrer">github.com/sagarchalat</a>
+              <span className="ats-divider">|</span>
+              <a href="https://sagarchalat.github.io/sagarchalat-portfolio/" target="_blank" rel="noopener noreferrer">Personal-Portfolio</a>
             </div>
           </header>
 
           {/* Professional Summary */}
           <section className="ats-section">
-            <h3 className="ats-section-title">PROFESSIONAL SUMMARY</h3>
-            <p className="ats-summary-text">{personal.summary}</p>
+            <h2 className="ats-section-title">PROFESSIONAL SUMMARY</h2>
+            <p className="ats-summary-text">
+              Agentic AI Engineer with 1.8+ years of experience designing and delivering production-ready AI applications in Python, FastAPI, LLMs, and Retrieval-Augmented Generation (RAG). Experienced in building multi-agent AI systems, semantic search platforms, and scalable backend services deployed on Docker, Kubernetes, and Google Cloud Platform (GCP). Strong in AI orchestration, REST API design, vector databases, and enterprise AI architecture, with a track record of turning an original concept into a production system.
+            </p>
           </section>
 
           {/* Technical Skills */}
           <section className="ats-section">
-            <h3 className="ats-section-title">TECHNICAL SKILLS</h3>
+            <h2 className="ats-section-title">TECHNICAL SKILLS</h2>
             <div className="ats-skills-grid">
               <div className="ats-skill-line">
-                <strong>Agentic AI & LLM:</strong> Agentic AI, Multi-Agent Systems, LLM Application Development, RAG, Prompt Engineering, Tool Calling, AI Workflow Orchestration, LangChain, HuggingFace, Semantic Search, Embeddings, Model Evaluation
+                <strong>Agentic AI &amp; LLM:</strong> Agentic AI, Multi-Agent Systems, LLM Application Development, RAG, Prompt Engineering, Tool Calling, AI Workflow Orchestration, LangChain, HuggingFace, Semantic Search, Embeddings, Model Evaluation
               </div>
               <div className="ats-skill-line">
                 <strong>Languages:</strong> Python, Java, SQL, Bash
@@ -143,53 +162,50 @@ function Resume() {
                 <strong>Backend:</strong> FastAPI, Flask, REST APIs, AsyncIO, Microservices
               </div>
               <div className="ats-skill-line">
-                <strong>Databases & Vector Stores:</strong> PostgreSQL, MongoDB, FAISS, ChromaDB
+                <strong>Databases &amp; Vector Stores:</strong> PostgreSQL, MongoDB, FAISS, ChromaDB
               </div>
               <div className="ats-skill-line">
-                <strong>Cloud & DevOps:</strong> Docker, Kubernetes, Google Cloud Platform (GCP), Git, GitHub Actions, CI/CD, Linux
+                <strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, Google Cloud Platform (GCP), Git, GitHub Actions, CI/CD, Linux
               </div>
               <div className="ats-skill-line">
-                <strong>Computer Science:</strong> Data Structures & Algorithms, OOP, Design Patterns, Distributed Systems, Multithreading
+                <strong>Computer Science:</strong> Data Structures &amp; Algorithms, OOP, Design Patterns, Distributed Systems, Multithreading
               </div>
             </div>
           </section>
 
           {/* Professional Experience */}
           <section className="ats-section">
-            <h3 className="ats-section-title">PROFESSIONAL EXPERIENCE</h3>
-            {experience.map((exp) => (
-              <div key={exp.id} className="ats-exp-block">
-                <div className="ats-exp-header">
-                  <div>
-                    <strong className="ats-exp-role">{exp.role}</strong> | <span className="ats-exp-company">{exp.company}</span>, {exp.location}
-                  </div>
-                  <span className="ats-exp-period">{exp.period}</span>
+            <h2 className="ats-section-title">PROFESSIONAL EXPERIENCE</h2>
+            <div className="ats-exp-block">
+              <div className="ats-exp-header">
+                <div>
+                  <strong className="ats-exp-role">Software Engineer</strong> | <span className="ats-exp-company">STL Digital, Bengaluru</span>
                 </div>
-                <ul className="ats-bullet-list">
-                  <li>Design and build scalable FastAPI microservices that power enterprise AI applications and expose REST APIs for LLM-driven workflows.</li>
-                  <li>Build production RAG pipelines -- semantic search and vector-based document retrieval -- to ground LLM responses in real enterprise knowledge.</li>
-                  <li>Design modular backend services that connect AI components and enterprise applications through reusable, well-defined API contracts.</li>
-                  <li>Write Python automation for deployment validation and recurring engineering tasks, cutting down manual effort across the team.</li>
-                  <li>Containerize AI services with Docker and deploy them on Kubernetes clusters running on GCP.</li>
-                  <li>Work in Linux production environments daily -- debugging, monitoring, and keeping AI services healthy.</li>
-                  <li>Collaborate cross-functionally using Agile practices, Git workflows, peer code review, and CI/CD.</li>
-                  <li>
-                    <strong>Proposed an enterprise AI QA Operating System as an internal innovation initiative and led its technical architecture and implementation with the engineering team</strong> -- a platform that automates requirement analysis, test planning, execution, and reporting through coordinated AI agents working over a shared knowledge base.
-                  </li>
-                </ul>
+                <span className="ats-exp-period">Jan 2025 – Present</span>
               </div>
-            ))}
+              <ul className="ats-bullet-list">
+                <li>Design and build scalable FastAPI microservices that power enterprise AI applications and expose REST APIs for LLM-driven workflows.</li>
+                <li>Build production RAG pipelines -- semantic search and vector-based document retrieval -- to ground LLM responses in real enterprise knowledge.</li>
+                <li>Design modular backend services that connect AI components and enterprise applications through reusable, well-defined API contracts.</li>
+                <li>Write Python automation for deployment validation and recurring engineering tasks, cutting down manual effort across the team.</li>
+                <li>Containerize AI services with Docker and deploy them on Kubernetes clusters running on GCP.</li>
+                <li>Work in Linux production environments daily -- debugging, monitoring, and keeping AI services healthy.</li>
+                <li>Collaborate cross-functionally using Agile practices, Git workflows, peer code review, and CI/CD.</li>
+                <li>Proposed an enterprise AI QA Operating System as an internal innovation initiative and led its technical architecture and implementation with the engineering team -- a platform that automates requirement analysis, test planning, execution, and reporting through coordinated AI agents working over a shared knowledge base.</li>
+              </ul>
+            </div>
           </section>
 
-          {/* Projects */}
+          {/* Projects - Exactly matches Live PDF: AI QA Operating System (AQOS) */}
           <section className="ats-section">
-            <h3 className="ats-section-title">PROJECTS</h3>
-
+            <h2 className="ats-section-title">PROJECTS</h2>
             <div className="ats-project-item">
               <div className="ats-project-header">
                 <strong>AI QA Operating System (AQOS) — Enterprise Multi-Agent AI Platform</strong>
               </div>
-              <div className="ats-tech-sub">Python, FastAPI, LangChain, RAG, PostgreSQL, Vector Database, Docker, Kubernetes, GCP</div>
+              <div className="ats-tech-sub">
+                Python, FastAPI, LangChain, RAG, PostgreSQL, Vector Database, Docker, Kubernetes, GCP
+              </div>
               <ul className="ats-bullet-list">
                 <li>Conceived and designed an enterprise AI quality-engineering platform as a personal project, then presented the concept internally, where it grew into an implementation initiative with active engineering collaboration.</li>
                 <li>Played a lead role in designing and implementing a multi-agent AI architecture that automates requirement analysis, test planning, execution, defect triage, root-cause analysis, and release reporting through coordinated AI agents.</li>
@@ -201,64 +217,30 @@ function Resume() {
                 <li>Contributed across production backend engineering, cloud deployment, and AI orchestration, working closely with cross-functional engineering teams.</li>
               </ul>
             </div>
+          </section>
 
-            <div className="ats-project-item">
-              <div className="ats-project-header">
-                <strong>Enterprise RAG Chatbot</strong>
+          {/* Education - Exact match with Live PDF Page 2 */}
+          <section className="ats-section">
+            <h2 className="ats-section-title">EDUCATION</h2>
+            <div className="ats-edu-block">
+              <div className="ats-edu-degree">
+                <strong>Bachelor of Engineering, Information Science &amp; Engineering</strong>
               </div>
-              <div className="ats-tech-sub">Python, LangChain, FAISS, FastAPI, GCP</div>
-              <ul className="ats-bullet-list">
-                <li>Built an intelligent document retrieval chatbot using RAG architecture and chunking strategies.</li>
-                <li>Implemented semantic search using vector embeddings and dense FAISS index.</li>
-                <li>Grounded LLM responses in real enterprise knowledge with fast retrieval latencies.</li>
-              </ul>
-            </div>
-
-            <div className="ats-project-item">
-              <div className="ats-project-header">
-                <strong>LLM Fine-Tuning Pipeline</strong>
+              <div className="ats-edu-school">
+                Sri Siddhartha Institute of Technology, Karnataka, India — 2024
               </div>
-              <div className="ats-tech-sub">PyTorch, Hugging Face, PEFT</div>
-              <ul className="ats-bullet-list">
-                <li>Fine-tuned open-source LLMs on custom datasets for domain adaptation.</li>
-                <li>Built automated evaluation workflows for benchmarking model performance.</li>
-              </ul>
-            </div>
-
-            <div className="ats-project-item">
-              <div className="ats-project-header">
-                <strong>MLOps Deployment Pipeline</strong>
-              </div>
-              <div className="ats-tech-sub">Docker, Kubernetes, GitHub Actions, MLflow</div>
-              <ul className="ats-bullet-list">
-                <li>Designed CI/CD pipelines for training, testing, and deploying ML models.</li>
-                <li>Automated model versioning and deployment rollback.</li>
-              </ul>
             </div>
           </section>
 
-          {/* Certifications */}
+          {/* Certifications - Exact match with Live PDF Page 2 */}
           <section className="ats-section">
-            <h3 className="ats-section-title">CERTIFICATIONS</h3>
+            <h2 className="ats-section-title">CERTIFICATIONS</h2>
             <ul className="ats-bullet-list">
-              {certifications.map((cert, idx) => (
-                <li key={idx}>
-                  <strong>{cert.title}</strong> — {cert.issuer}
-                </li>
-              ))}
+              <li>Programming with Python Professional Certificate — OpenEDG</li>
+              <li>Machine Learning Statistical Foundations — Wolfram</li>
+              <li>Career Essentials in Generative AI — Microsoft</li>
+              <li>Java Foundations — JetBrains</li>
             </ul>
-          </section>
-
-          {/* Education */}
-          <section className="ats-section">
-            <h3 className="ats-section-title">EDUCATION</h3>
-            <div className="ats-exp-header">
-              <div>
-                <strong>{personal.education.degree}</strong>
-                <div>{personal.education.institution}</div>
-              </div>
-              <span>{personal.education.year}</span>
-            </div>
           </section>
         </div>
       )}

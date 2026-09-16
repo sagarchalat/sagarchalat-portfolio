@@ -48,7 +48,7 @@ function App() {
             <div className="footer-links">
               <a href="https://github.com/sagarchalat" target="_blank" rel="noopener noreferrer">GitHub</a>
               <a href="https://www.linkedin.com/in/sagarchalat" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://sagarchalatan.netlify.app" target="_blank" rel="noopener noreferrer">Netlify Site</a>
+              <a href="https://sagarchalat.github.io/sagarchalat-portfolio/" target="_blank" rel="noopener noreferrer">Personal-Portfolio</a>
               <a href={portfolioData.personal.resumeUrl} download="Sagar_S_AI-Eng.pdf">Download Resume</a>
               <a href="mailto:sagarchalatan@gmail.com">sagarchalatan@gmail.com</a>
             </div>
