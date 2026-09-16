@@ -41,7 +41,7 @@ function Skills() {
           </svg>
           <input
             type="text"
-            placeholder="Search skills (e.g. RAG, PyTorch, LoRA, FAISS, Docker)..."
+            placeholder="Search skills (e.g. GCP, ADK, RAG, PyTorch, LoRA, FAISS, Docker)..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="skills-search-input"

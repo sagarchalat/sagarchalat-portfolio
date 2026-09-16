@@ -10,8 +10,8 @@ const resumeUrl = resumeAssetPdf || `${PUBLIC_URL}/Sagar_S_AI-Eng.pdf`;
 export const portfolioData = {
   personal: {
     name: "Sagar S",
-    title: "Agentic AI Engineer",
-    roleSubtitle: "Agentic AI | LLM Applications | Multi-Agent AI | RAG | Backend Engineering",
+    title: "AI/ML Engineer",
+    roleSubtitle: "AI/ML Engineer | LLM Applications | Multi-Agent AI | RAG | Backend Engineering",
     location: "Bengaluru, India",
     phone: "+91 73384 98489",
     email: "sagarchalatan@gmail.com",
@@ -23,7 +23,7 @@ export const portfolioData = {
     seasons: "1.8+ Yrs Exp",
     quality: "Ultra HD 4K",
     summary:
-      "Agentic AI Engineer with 1.8+ years of experience designing and delivering production-ready AI applications in Python, FastAPI, LLMs, and Retrieval-Augmented Generation (RAG). Experienced in building multi-agent AI systems, semantic search platforms, and scalable backend services deployed on Docker, Kubernetes, and Google Cloud Platform (GCP). Strong in AI orchestration, REST API design, vector databases, and enterprise AI architecture, with a track record of turning an original concept into a production system.",
+      "AI/ML Engineer with 1.8+ years of experience designing and delivering production-ready AI applications in Python, FastAPI, LLMs, and Retrieval-Augmented Generation (RAG). Experienced in building multi-agent AI systems, semantic search platforms, and scalable backend services deployed on Docker, Kubernetes, and Google Cloud Platform (GCP). Strong in AI orchestration, REST API design, vector databases, and enterprise AI architecture, with a track record of turning an original concept into a production system.",
     highlights: [
       { label: "Multi-Agent AI", value: "Enterprise", desc: "Automated QA, triage & orchestration via coordinated agents" },
       { label: "FastAPI & APIs", value: "Production", desc: "Modular, tool-callable APIs supporting autonomous workflows" },
@@ -103,6 +103,14 @@ export const portfolioData = {
 
   skills: [
     // Agentic AI & LLMs
+    {
+      name: "Agent Development Kit (ADK)",
+      category: "agentic_llm",
+      level: "95%",
+      badge: "Core Framework",
+      description: "Designing and deploying production multi-agent architectures, tool execution sandboxes, agent memory loops, and autonomous workflows using Agent Development Kits (ADK) and modern AI SDKs.",
+      tags: ["ADK", "Agent Development Kit", "Agent Frameworks", "Multi-Agent", "Tool Integration", "Orchestration"]
+    },
     {
       name: "Agentic AI",
       category: "agentic_llm",
@@ -208,10 +216,10 @@ export const portfolioData = {
     {
       name: "Google Cloud Platform (GCP)",
       category: "cloud_devops",
-      level: "92%",
-      badge: "Cloud",
-      description: "Production cloud deployments, Google Kubernetes Engine (GKE), Cloud Run, Compute Engine, and Cloud Storage.",
-      tags: ["GKE", "Cloud Run", "GCS", "IAM", "Cloud Logging"]
+      level: "93%",
+      badge: "Cloud & AI",
+      description: "Production cloud deployments, Google Kubernetes Engine (GKE), Cloud Run, Compute Engine, Vertex AI, and Cloud Storage for scalable AI workloads.",
+      tags: ["GCP", "Google Cloud", "Vertex AI", "GKE", "Cloud Run", "GCS", "IAM", "Cloud Logging"]
     },
     {
       name: "Docker & Containerization",

@@ -18,7 +18,7 @@ function Resume() {
           <span className="netflix-tag">SAGARCHALAT PORTFOLIO • OFFICIAL RESUME</span>
           <h1>{personal.name} — Resume</h1>
           <p className="resume-subtitle">
-            {personal.title} | {personal.location} | {personal.phone} | {personal.email}
+            Agentic AI Engineer | {personal.location} | {personal.phone} | {personal.email}
           </p>
         </div>
 
