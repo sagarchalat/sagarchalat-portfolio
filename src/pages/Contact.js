@@ -58,7 +58,7 @@ function Contact() {
       <div className="contact-wrapper">
         {/* Header */}
         <div className="contact-header">
-          <span className="contact-tag">NETFLIX PORTFOLIO • GET IN TOUCH</span>
+          <span className="contact-tag">SAGARCHALAT PORTFOLIO • GET IN TOUCH</span>
           <h1>CONTACT & HIRE</h1>
           <p className="contact-subtitle">
             Looking for a high-impact Machine Learning Engineer specialized in LLMs, RAG, and production MLOps?
