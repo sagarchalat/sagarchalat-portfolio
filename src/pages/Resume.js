@@ -15,7 +15,7 @@ function Resume() {
       {/* Resume Top Control Bar */}
       <div className="resume-control-bar">
         <div className="resume-title-group">
-          <span className="netflix-tag">NETFLIX PORTFOLIO • OFFICIAL RESUME</span>
+          <span className="netflix-tag">SAGARCHALAT PORTFOLIO • OFFICIAL RESUME</span>
           <h1>{personal.name} — Resume</h1>
           <p className="resume-subtitle">
             {personal.title} | {personal.location} | {personal.phone} | {personal.email}
