@@ -40,7 +40,7 @@ function App() {
           <div className="footer-content">
             <div className="footer-brand">
               <span className="footer-n">S</span>
-              <span className="footer-text">SAGARCHALAT • AGENTIC AI ENGINEER</span>
+              <span className="footer-text">SAGARCHALAT • AI/ML ENGINEER</span>
             </div>
             <p className="footer-copy">
               © {new Date().getFullYear()} Sagar Chalat. Designed with cinematic streamer aesthetics. All rights reserved.
