@@ -33,7 +33,7 @@ function Home() {
       {/* Hero Cinematic Section */}
       <section className="netflix-hero-section">
         <div className="hero-backdrop-container">
-          <img src={heroBg} alt="Sagar S - Machine Learning Engineer" className="hero-backdrop-img" />
+          <img src={heroBg} alt="Sagar S - AI/ML Engineer" className="hero-backdrop-img" />
           <div className="hero-vignette-bottom"></div>
           <div className="hero-vignette-left"></div>
           <div className="hero-vignette-top"></div>
@@ -42,7 +42,7 @@ function Home() {
         <div className="hero-content-wrapper">
           <div className="hero-series-tag">
             <span className="hero-n-badge">S</span>
-            <span className="hero-tag-text">SAGARCHALAT ORIGINAL • AGENTIC AI ENGINEER</span>
+            <span className="hero-tag-text">SAGARCHALAT ORIGINAL • AI/ML ENGINEER</span>
           </div>
 
           <h1 className="hero-main-title">{personal.name}</h1>

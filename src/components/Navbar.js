@@ -71,7 +71,7 @@ function Navbar() {
             <span>CV</span>
           </a>
 
-          <Link to="/contact" className="avatar-wrapper" title="Sagar S - ML Engineer Profile">
+          <Link to="/contact" className="avatar-wrapper" title="Sagar S - AI/ML Engineer Profile">
             <img src={profileImage} alt="Sagar S" className="navbar-avatar" />
             <span className="online-indicator"></span>
           </Link>

@@ -145,7 +145,7 @@ function Skills() {
       <div className="skills-resume-banner">
         <div className="banner-text">
           <h3>Need Sagar's complete technical skill matrix & credentials?</h3>
-          <p>Download the official Agentic AI Engineer resume PDF directly.</p>
+          <p>Download the official AI/ML Engineer resume PDF directly.</p>
         </div>
         <div className="banner-buttons">
           <a href={personal.resumeUrl} download="Sagar_S_AI-Eng.pdf" className="banner-download-btn">

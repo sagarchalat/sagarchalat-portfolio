@@ -61,7 +61,7 @@ function Contact() {
           <span className="contact-tag">SAGARCHALAT PORTFOLIO • GET IN TOUCH</span>
           <h1>CONTACT & HIRE</h1>
           <p className="contact-subtitle">
-            Looking for a high-impact Machine Learning Engineer specialized in LLMs, RAG, and production MLOps?
+            Looking for a high-impact AI/ML Engineer specialized in LLMs, RAG, and production MLOps?
             Let's connect.
           </p>
         </div>
@@ -225,7 +225,7 @@ function Contact() {
                     id="subject"
                     type="text"
                     required
-                    placeholder="e.g. Machine Learning Engineer Role / RAG Project"
+                    placeholder="e.g. AI/ML Engineer Role / RAG Project"
                     value={formData.subject}
                     onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                   />
