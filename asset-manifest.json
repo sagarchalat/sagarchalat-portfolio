@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/sagarchalat-portfolio/static/css/main.db4a5d74.css",
-    "main.js": "/sagarchalat-portfolio/static/js/main.93f992c2.js",
+    "main.js": "/sagarchalat-portfolio/static/js/main.909f40ff.js",
     "static/media/rag_chatbot.jpg": "/sagarchalat-portfolio/static/media/rag_chatbot.681845f81c06fcda0dea.jpg",
     "static/media/aqos_project.jpg": "/sagarchalat-portfolio/static/media/aqos_project.3f2b1c1d5f38c374643d.jpg",
     "static/media/mlops_pipeline.jpg": "/sagarchalat-portfolio/static/media/mlops_pipeline.39aa7e92b01864ad6315.jpg",
@@ -11,10 +11,10 @@
     "static/media/profile.jpg": "/sagarchalat-portfolio/static/media/profile.b5b6a95c7ead005a7708.jpg",
     "index.html": "/sagarchalat-portfolio/index.html",
     "main.db4a5d74.css.map": "/sagarchalat-portfolio/static/css/main.db4a5d74.css.map",
-    "main.93f992c2.js.map": "/sagarchalat-portfolio/static/js/main.93f992c2.js.map"
+    "main.909f40ff.js.map": "/sagarchalat-portfolio/static/js/main.909f40ff.js.map"
   },
   "entrypoints": [
     "static/css/main.db4a5d74.css",
-    "static/js/main.93f992c2.js"
+    "static/js/main.909f40ff.js"
   ]
 }
