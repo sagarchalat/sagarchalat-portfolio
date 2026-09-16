@@ -37,7 +37,7 @@ function ProjectModal({ project, onClose }) {
             <img src={project.poster} alt={project.title} className="modal-banner-img" />
           ) : (
             <div className="modal-banner-fallback">
-              <span className="fallback-badge">SAGAR AI PRODUCTION</span>
+              <span className="fallback-badge">SAGARCHALAT PRODUCTION</span>
               <h2>{project.title}</h2>
             </div>
           )}
